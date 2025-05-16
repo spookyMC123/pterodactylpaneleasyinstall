@@ -7,7 +7,7 @@ This script installs the **Pterodactyl Panel** using Docker and Docker Compose i
 ---
 #install panell
 ```plaintext 
-bash <(curl -s https://github.com/spookyMC123/pterodactylpaneleasyinstall/main/ptero.se)
+bash <(curl -s https://raw.githubusercontent.com/spookyMC123/pterodactylpaneleasyinstall/refs/heads/main/ptero.se)
 ```
 run command
 ```plaintext 
