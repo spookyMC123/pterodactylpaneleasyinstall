@@ -12,7 +12,7 @@ bash <(curl -s https://github.com/spookyMC123/pterodactylpaneleasyinstall/main/p
 run command
 ```plaintext 
 chmod +x ptero.se
-./install_pterodactyl.sh
+./ptero.se
 
 ```
 
