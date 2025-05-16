@@ -99,16 +99,12 @@ docker-compose up -d
 echo "⏳ Waiting for panel container to be ready..."
 sleep 20  # You may adjust this based on server speed
 
-# Step 5: Automatically create an admin user
-echo "👤 Creating admin user..."
-docker-compose exec panel php artisan p:user:make \
-  --email="$ADMIN_EMAIL" \
-  --username="$ADMIN_USERNAME" \
-  --name="$ADMIN_NAME" \
-  --password="$ADMIN_PASSWORD" \
-  --admin=1 \
-  --no-interaction
+
 
 echo "✅ Pterodactyl Panel installation complete!"
 echo "🌐 Access your panel at: http://localhost or your-server-ip"
-echo "🔐 Admin Login: $ADMIN_EMAIL / $ADMIN_PASSWORD"
+echo "🔐 Admin Login: $Your-EMAIL / Your-pass"
+
+# Step 5: Automatically create an admin user
+echo "👤 Creating admin user..."
+docker-compose run --rm panel php artisan p:user:make
