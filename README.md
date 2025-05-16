@@ -1,3 +1,9 @@
+🐉 Pterodactyl Panel Docker Installer
+This script installs the **Pterodactyl Panel** using Docker and Docker Compose in a simple and automated way.
+
+> ⚠️ Made by **Joy**
+
+
 #install panell
 ```plaintext 
 bash <(curl -s https://github.com/spookyMC123/pterodactylpaneleasyinstall/main/ptero.se)
@@ -9,13 +15,6 @@ chmod +x ptero.se
 
 ```
 
-
-
-# 🐉 Pterodactyl Panel Docker Installer
-
-This script installs the **Pterodactyl Panel** using Docker and Docker Compose in a simple and automated way.
-
-> ⚠️ Made by **Joy**
 
 ---
 
