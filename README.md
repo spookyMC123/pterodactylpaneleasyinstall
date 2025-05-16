@@ -1,4 +1,5 @@
-#🐉 Pterodactyl Panel Docker Installer
+## 🐉 Pterodactyl Panel Docker Installer
+
 This script installs the **Pterodactyl Panel** using Docker and Docker Compose in a simple and automated way.
 
 > ⚠️ Made by **Joy**
