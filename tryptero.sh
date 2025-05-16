@@ -3,16 +3,6 @@
 
 echo "📦 Installing Pterodactyl Panel with Docker..."
 
-# Configuration - Update these values as needed
-DB_PASSWORD="StrongDBPassword123"
-DB_ROOT_PASSWORD="StrongRootPassword123"
-ADMIN_EMAIL="admin@example.com"
-ADMIN_NAME="Admin"
-ADMIN_PASSWORD="SuperSecureAdminPassword"
-ADMIN_USERNAME="adminuser"
-PANEL_URL="https://pterodactyl.example.com"
-PANEL_TIMEZONE="UTC"
-
 # Step 1: Create directory structure
 mkdir -p pterodactyl/panel
 cd pterodactyl/panel || exit 1
