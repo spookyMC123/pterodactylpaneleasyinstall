@@ -128,3 +128,5 @@ docker-compose up -d
 
 echo "✅ Pterodactyl Panel is now running!"
 echo "🌐 Visit it at: http://localhost:8080 or your external IP on port 8080"
+
+docker-compose run --rm panel php artisan p:user:make
