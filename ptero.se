@@ -10,15 +10,13 @@ echo "██║╚██╔╝██║██╔══██║██║  ██
 echo "██║ ╚═╝ ██║██║  ██║██████╔╝███████╗    ██████╔╝   ██║       ██║  ██║███████╗╚██████╔╝██╔╝ ██╗"
 echo "╚═╝     ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝    ╚═════╝    ╚═╝       ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝"
 
-
 echo "contain"
-
 echo "  ██████  ██████  ███    ██ ████████  █████  ██ ███    ██     ██████  ██    ██          ██ ██ ███████ ██   ██ ███    ██ ██    ██"
 echo " ██      ██    ██ ████   ██    ██    ██   ██ ██ ████   ██     ██   ██  ██  ██           ██ ██ ██      ██   ██ ████   ██ ██    ██"
 echo " ██      ██    ██ ██ ██  ██    ██    ███████ ██ ██ ██  ██     ██████    ████            ██ ██ ███████ ███████ ██ ██  ██ ██    ██"
 echo " ██      ██    ██ ██  ██ ██    ██    ██   ██ ██ ██  ██ ██     ██   ██    ██        ██   ██ ██      ██ ██   ██ ██  ██ ██ ██    ██"
 echo "  ██████  ██████  ██   ████    ██    ██   ██ ██ ██   ████     ██████     ██         █████  ██ ███████ ██   ██ ██   ████  ██████ "
-echo "                                                     power by InfinityForge                                                     "                 "
+echo "                                                     power by InfinityForge                                                     "
 
 echo "* Installing Dependencies"
 
@@ -37,21 +35,14 @@ version: '3.8'
 x-common:
   database:
     &db-environment
-    # Do not remove the "&db-password" from the end of the line below, it is important
-    # for Panel functionality.
     MYSQL_PASSWORD: &db-password "CHANGE_ME"
     MYSQL_ROOT_PASSWORD: "CHANGE_ME_TOO"
   panel:
     &panel-environment
-    # This URL should be the URL that your reverse proxy routes to the panel server
     APP_URL: "https://pterodactyl.example.com"
-    # A list of valid timezones can be found here: http://php.net/manual/en/timezones.php
     APP_TIMEZONE: "UTC"
     APP_SERVICE_AUTHOR: "noreply@example.com"
-    TRUSTED_PROXIES: "*" # Set this to your proxy IP
-    # Uncomment the line below and set to a non-empty value if you want to use Let's Encrypt
-    # to generate an SSL certificate for the Panel.
-    # LE_EMAIL: ""
+    TRUSTED_PROXIES: "*"
   mail:
     &mail-environment
     MAIL_FROM: "noreply@example.com"
@@ -61,14 +52,7 @@ x-common:
     MAIL_USERNAME: ""
     MAIL_PASSWORD: ""
     MAIL_ENCRYPTION: "true"
- 
-#
-# ------------------------------------------------------------------------------------------
-# DANGER ZONE BELOW
-#
-# The remainder of this file likely does not need to be changed. Please only make modifications
-# below if you understand what you are doing.
-#
+
 services:
   database:
     image: mariadb:10.5
@@ -80,9 +64,11 @@ services:
       <<: *db-environment
       MYSQL_DATABASE: "panel"
       MYSQL_USER: "pterodactyl"
+
   cache:
     image: redis:alpine
     restart: always
+
   panel:
     image: ghcr.io/pterodactyl/panel:latest
     restart: always
@@ -108,6 +94,7 @@ services:
       REDIS_HOST: "cache"
       DB_HOST: "database"
       DB_PORT: "3306"
+
 networks:
   default:
     ipam:
@@ -124,4 +111,3 @@ echo "🌐 Access your panel at port 80: http://localhost:80 or your-server-ip:8
 
 # Step 4: Create an admin user for the Panel
 docker-compose run --rm panel php artisan p:user:make
-
