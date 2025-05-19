@@ -5,8 +5,11 @@ This script installs the **Pterodactyl Panel** using Docker and Docker Compose i
 > ⚠️ Made by **Joy**
 
 github or ect install 1/-
+
 first cmd not working then 2/-
+
 codesandbox 3/-
+
 or cmd 4/-
 
 ---
