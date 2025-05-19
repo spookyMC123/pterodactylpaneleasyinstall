@@ -8,6 +8,7 @@ github or ect install 1/-
 first cmd not working then 2/-
 codesandbox 3/-
 or cmd 4/-
+
 ---
 1/-
 #install panell [recommended]
