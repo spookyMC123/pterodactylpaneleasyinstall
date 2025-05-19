@@ -4,16 +4,28 @@ This script installs the **Pterodactyl Panel** using Docker and Docker Compose i
 
 > ⚠️ Made by **Joy**
 
+github or ect install 1/-
+first cmd not working then 2/-
+codesandbox 3/-
+or cmd 4/-
 ---
+1/-
 #install panell [recommended]
 ```plaintext 
 bash <(curl -s https://raw.githubusercontent.com/spookyMC123/pterodactylpaneleasyinstall/refs/heads/main/ptero.se)
 ```
+2/-
 #use only uper command not working install panel
 ```plaintext
 bash <(curl -s https://raw.githubusercontent.com/spookyMC123/pterodactylpaneleasyinstall/refs/heads/main/tryptero.sh)
 ```
+3/-
+#codesandbox vps
+```plaintext
+bash <(curl -s https://raw.githubusercontent.com/spookyMC123/pterodactylpaneleasyinstall/refs/heads/main/codesandboxptero.sh)
+```
 #or
+4/-
 #install
 ```plaintext 
 git clone https://github.com/spookyMC123/pterodactylpaneleasyinstall.git
